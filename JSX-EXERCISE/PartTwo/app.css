@@ -1,0 +1,18 @@
+.tweet {
+    background-color: #f2fdf4;
+    border: 2px solid #e7e7e7;
+    width: 50%;
+    text-align: center;
+}
+
+.text {
+    color: #75c572;
+}
+
+.user {
+    color: rgb(204, 201, 201);
+}
+
+#app {
+    margin-left: 30%;
+}

@@ -1,0 +1,48 @@
+What is webpack?
+Webpack is a static module bundler for modern JavaScript applications,  Ultimately the goal of webpack is 
+to take all of your files (JavaScript, CSS, etc), then combine and minify those files into a single JavaScript file
+and a single CSS file. When files are combined and minified, the user of your application can download
+the website faster.
+
+What is babel?
+Babel is a JavaScript compiler Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards 
+compatible version of JavaScript in current and older browsers or environments
+
+What is a loader?
+Loaders are transformations that are applied to the source code of a module. They allow you to pre-process files as you import or “load” them.
+
+Give three examples of different kinds of loaders.
+1. babel-loader
+2. html-loader
+3. sass-loader
+
+What is the difference between path and publicPath when used as keys in the output object?
+Path: This points to target directory for all output files(bundled) and must be an absolute path.
+publicPath: publicPath specifies the virtual directory in web server from where bundled file, app.js is going to get served up from. Keep in mind, the word server when using publicPath can be either webpack-dev-server or express server or other server that you can use with webpack.
+
+What is a babel preset?
+babel preset is a set of plugins used to support particular language features.
+
+What does test:/\.jsx?$/ mean inside of webpack.config.js?
+This is a regex that matches files that end with .js OR .jsx
+
+What is the webpack-dev-server?
+webpack-dev-server is configuration by default to support live-reload of files as you edit your assets while the server is running.
+
+Research tree shaking and code splitting. What are these two things and how do they help reduce bundle sizes?
+Tree shaking is a term commonly used within a JavaScript context to describe the removal of dead code.
+It relies on the import and export statements in ES2015 to detect if code modules are exported and imported for use between JavaScript files. 
+We can make use of module bundlers (e.g., webpack or Rollup) to automatically remove dead code when bundling multiple JavaScript files into single files. 
+This is important for preparing code that is production ready, for example with clean structures and minimal file size. 
+Code-splitting - To avoid winding up with a large bundle, it’s good to get ahead of the problem and start “splitting” 
+your bundle. Code-Splitting is a feature supported by bundlers like Webpack, Rollup and Browserify which can create multiple bundles that can be dynamically loaded at runtime. 
+This can dramatically improve the performance of your app as we only load what is needed.
+
+What does the default keyword do when exporting?
+default keyword is used to reference the default export, and can be one per file.
+
+What is object destructuring?
+Object destructuring is a useful JavaScript feature to extract properties from objects and bind them to variables
+
+How can you enable your webpack.config.js to do certain things in production versus development?
+By setting the mode property in the 'webpack.config.js'(this can be named anything but webpack searches for a file with that name and automatically uses that config) file to either for development or production. A better way might be to create a production config file and development config file and just make use of npm scripts to load either.
